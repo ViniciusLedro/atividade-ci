@@ -1,0 +1,29 @@
+{
+  "name": "atividade-ci",
+  "version": "1.0.0",
+  "description": "Atividade de Integracao Continua",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "build": "vite build",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
+    "supertest": "^7.3.2",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  }
+}
