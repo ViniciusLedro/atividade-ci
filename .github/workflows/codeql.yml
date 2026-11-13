@@ -1,0 +1,26 @@
+name: CodeQL - Analise de seguranca
+
+"on":
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  security-events: write
+  actions: read
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do codigo
+        uses: actions/checkout@v4
+
+      - name: Inicializar CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+
+      - name: Executar analise
+        uses: github/codeql-action/analyze@v3
