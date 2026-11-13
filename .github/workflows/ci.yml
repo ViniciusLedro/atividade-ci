@@ -1,7 +1,6 @@
-
 name: CI - Aplicacao Web
 
-'on':
+"on":
   pull_request:
     branches:
       - main
